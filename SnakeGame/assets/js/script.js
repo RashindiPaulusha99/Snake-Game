@@ -32,34 +32,20 @@ function createSnake() {
 }
 
 setInterval(move,500);
+var stop = setInterval(moveDown,500);
 
 function move() {
     clearCanvas();
     snakeMove();
 }
 
+function moveDown() {
+    snake[0].offsetY = snake[0].offsetY + gap;
+}
+
 function snakeMove() {
 
     for (var i = 0; i <snake.length ; i++) {
-
-       /* //snake[i].offsetX = snake[i].offsetX;
-        snake[i].offsetY = snake[i].offsetY + gap;
-
-        ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
-        ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
-
-        $.each(snake, function (index , value) {
-            snake[index].offsetY = snake[index].offsetY + gap;
-
-            ctx.fillRect(snake[index].offsetX, snake[index].offsetY, snakeWidth, snakeHeight);
-            ctx.strokeRect(snake[index].offsetX, snake[index].offsetY, snakeWidth, snakeHeight);
-
-        });
-
-    }*/
-    //snake[0].offsetY = snake[0].offsetY + gap;
-    //for (var index in snake) {
-        snake[i].offsetY = snake[i].offsetY + gap;
 
         ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
         ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
@@ -70,12 +56,16 @@ function snakeMove() {
        if (i == 0){
            if (keyPress == "ArrowDown"){
                snake[i].offsetY = snake[i].offsetY + gap;
+               clearInterval(stop);
            }else if (keyPress == "ArrowUp"){
                snake[i].offsetY = snake[i].offsetY - gap;
+               clearInterval(stop);
            }else if (keyPress == "ArrowRight") {
                snake[i].offsetX = snake[i].offsetX + gap;
+               clearInterval(stop);
            }else if (keyPress == "ArrowLeft") {
                snake[i].offsetX = snake[i].offsetX - gap;
+               clearInterval(stop);
            }
        }else {
            snake[i].offsetX = snake[i - 1].oldX;
