@@ -1,6 +1,7 @@
 const canvas = $('#canvas')[0];
 const ctx = canvas.getContext('2d');
 
+/*create main snake by array with 3 boxes*/
 var snake=[
     {offsetX:50, offsetY:60,oldX:0, oldY:0},
     {offsetX:50, offsetY:50,oldX:0, oldY:0},
@@ -12,14 +13,10 @@ var snakeHeight = 10;
 
 var gap = 10;
 
-const ARROW_LEFT = 37;
-const ARROW_UP = 38;
-const ARROW_RIGHT = 39;
-const ARROW_DOWN = 40;
-
 var keyPress;
 
 createSnake();
+/*visible snake*/
 function createSnake() {
 
     for (var i = 0; i < snake.length; i++) {
@@ -28,7 +25,6 @@ function createSnake() {
         ctx.strokeStyle='white';
         ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
     }
-
 }
 
 setInterval(move,500);
@@ -39,10 +35,12 @@ function move() {
     snakeMove();
 }
 
+/*running down at the beginning*/
 function moveDown() {
     snake[0].offsetY = snake[0].offsetY + gap;
 }
 
+/*snake moving to down, up, left, right*/
 function snakeMove() {
 
     for (var i = 0; i <snake.length ; i++) {
