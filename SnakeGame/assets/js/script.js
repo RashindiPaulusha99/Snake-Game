@@ -20,39 +20,24 @@ var keyPress;
 
 createSnake();
 /*visible snake*/
-function createSnake(index, value) {
+function createSnake() {
 
     for (var i = 0; i < snake.length; i++) {
         ctx.fillStyle = 'red';
         ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
         ctx.strokeStyle='white';
         ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
-
-        /*if (snake[i] == 0) {
-            if (collided(snake[i].x, snake[i].y)) {
-                console.log("over");
-            }
-        }*/
-
     }
-
-
 }
 
-function collided(x,y) {
-    return snake.filter(function (value,index) {
-        return index != 0 && value.x == x && value.y == y;
-    }).length > 0 || x < 0 || x > canvas.width || y < 0 || y > canvas.height;
-}
-
-setInterval(move,400);
+var stopMove = setInterval(move,400);
 var stop = setInterval(moveDown,400);
 
 function move() {
     clearCanvas();
     createFood();
+    //gameOver();
     snakeMove();
-    //createSnake();
 }
 
 function createFood() {
@@ -73,22 +58,52 @@ function createFood() {
         generateNewPosition();
     }
 
-    for (var i in snake) {
+    gameOver();
 
-
-        if (i != 0){
-            if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX === canvas.width || snake[0].offsetY === 0 || snake[0].offsetX === 0 ){
-                alert("game over");
-                clearInterval(stop);
-                return;
-            }
-        }
-    }
 }
 
 /*running down at the beginning*/
 function moveDown() {
     snake[0].offsetY = snake[0].offsetY + gap;
+}
+
+function gameOver() {
+    for (var i in snake) {
+
+        if (i != 0){
+            if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX === canvas.width || snake[0].offsetY === 0 || snake[0].offsetX === 0 ){
+                alert("game over");
+
+                //clearInterval(stopMove);
+
+                snake[0].offsetX = 50;
+                snake[0].oldX = 0;
+                snake[0].offsetY = 100;
+                snake[0].oldY = 0;
+                snake[1].offsetX = 50;
+                snake[1].oldX = 0;
+                snake[1].offsetY = 90;
+                snake[1].oldY = 0;
+                snake[2].offsetX = 50;
+                snake[2].oldX = 0;
+                snake[2].offsetY = 80;
+                snake[2].oldY = 0;
+
+                moveDown();
+
+                move();
+
+                score = 0;
+                $("#score").text(0);
+
+                if (snake.length > 3) {
+                    for (var i = 0; i < snake.length; i++) {
+                        snake.splice(i + 3, snake.length - 3);
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*snake moving to down, up, left, right*/
@@ -140,30 +155,10 @@ function generateNewPosition() {
     var randY = Math.floor(Math.random() * (canvas.height - 10));
     ctx.fillStyle = 'yellow';
     ctx.fillRect(randX, randY,snakeWidth, snakeHeight);
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 }
 
-/*function collided(x,y) {
-    return snake.filter(function (value,index) {
-        return index != 0 && value.x == x && value.y == y;
-    }).length > 0 || x < 0 || x > canvas.width || y < 0 || y > canvas.height;
-}*/
-
-function gameOver(index,x,y) {
-    if (index != 0){
-        if (snake[0].offsetX == snake[index].offsetX && snake[0].offsetY == snake[index].offsetY){
-            alert("game over");
-
-        }
-    }
-}
-
-$("#canvas").keydown(function (event) {
-    console.log("x",event.pageX);
-    console.log("y",event.pageY);
-    console.log(canvas.height);
-});
 
 
 
