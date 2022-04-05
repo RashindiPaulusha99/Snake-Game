@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/snake.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +56,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Internet Technology Documents/JS/SampleSnakeGame/jquery-snake-game" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets" />
     </key>
   </component>
@@ -73,7 +77,10 @@
       <updated>1648797610105</updated>
       <workItem from="1648797613885" duration="47000" />
       <workItem from="1648797685690" duration="14859000" />
-      <workItem from="1648904825078" duration="923000" />
+      <workItem from="1648904825078" duration="3295000" />
+      <workItem from="1648973663129" duration="12213000" />
+      <workItem from="1649039452972" duration="57000" />
+      <workItem from="1649145508730" duration="4343000" />
     </task>
     <servers />
   </component>
@@ -91,5 +98,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1649147531020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1649147531020" />
   </component>
 </project>
