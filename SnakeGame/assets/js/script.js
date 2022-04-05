@@ -16,7 +16,7 @@ var snakeHeight = 10;
 var gap = 10;
 var score = 0;
 
-var keyPress;
+var keyPress = "ArrowDown";
 
 createSnake();
 /*visible snake*/
@@ -30,13 +30,13 @@ function createSnake() {
     }
 }
 
-var stopMove = setInterval(move,400);
+setInterval(move,400);
 var stop = setInterval(moveDown,400);
 
 function move() {
     clearCanvas();
     createFood();
-    //gameOver();
+    gameOver();
     snakeMove();
 }
 
@@ -56,40 +56,64 @@ function createFood() {
         });
 
         generateNewPosition();
+
     }
+}
 
-    gameOver();
+/*generate new random position for food*/
+function generateNewPosition(){
 
+    var x =Math.floor(Math.random() * 10);
+
+    if (x%2 != 0 && x<10 || x%2 == 0 && x<10){
+        x = x * 10;
+    }else if (x%10 != 0 && 10<x<100 || x%10 == 0 && 10<x<100){
+        x = x / 10;
+        x = x * 10;
+    }
+    var y = Math.floor(Math.random() * 10);
+
+    if (y%2 != 0 && y<10 || y%2 == 0 && y<10){
+        y = y * 10;
+    }else if (y%10 != 0 && 10<y<100 || y%10 == 0 && 10<y<100){
+        y = y / 10;
+        y = y * 10;
+    }
+    food.offsetX = x;
+    food.offsetY = y;
 }
 
 /*running down at the beginning*/
 function moveDown() {
-    snake[0].offsetY = snake[0].offsetY + gap;
+
+    if (keyPress == "ArrowDown"){
+        snake[0].offsetY = snake[0].offsetY + gap;
+    }
 }
 
+/*when snake hits on own body and edge , game over */
 function gameOver() {
     for (var i in snake) {
 
         if (i != 0){
-            if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX === canvas.width || snake[0].offsetY === 0 || snake[0].offsetX === 0 ){
-                alert("game over");
+            if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ){
 
-                //clearInterval(stopMove);
+                alert("game over");
 
                 snake[0].offsetX = 50;
                 snake[0].oldX = 0;
-                snake[0].offsetY = 100;
+                snake[0].offsetY = 60;
                 snake[0].oldY = 0;
                 snake[1].offsetX = 50;
                 snake[1].oldX = 0;
-                snake[1].offsetY = 90;
+                snake[1].offsetY = 50;
                 snake[1].oldY = 0;
                 snake[2].offsetX = 50;
                 snake[2].oldX = 0;
-                snake[2].offsetY = 80;
+                snake[2].offsetY = 40;
                 snake[2].oldY = 0;
 
-                moveDown();
+                keyPress = "ArrowDown";
 
                 move();
 
@@ -150,14 +174,6 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function generateNewPosition() {
-    var randX = Math.floor(Math.random() * (canvas.width - 10));
-    var randY = Math.floor(Math.random() * (canvas.height - 10));
-    ctx.fillStyle = 'yellow';
-    ctx.fillRect(randX, randY,snakeWidth, snakeHeight);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-}
 
 
 
