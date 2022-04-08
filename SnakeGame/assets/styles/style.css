@@ -1,16 +1,14 @@
-#main_title{
-    color: #0f5132;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
 }
 
 #main_container{
     display: grid;
-    border: 2px solid black;
     width: 600px;
     height: 400px;
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -19,16 +17,117 @@
 }
 
 #canvas{
-    background-color: black;
+    background-image: radial-gradient(circle at top,lightblue,#000);
     width: 600px;
     height: 400px;
+    border: 5px solid white;
 }
 
 #scoreTitle{
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
+    position: absolute;
+    bottom: 50px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    color: #f6f6f6;
 }
 
-/*#image{
-    background-size: cover;
-}*/
+#image{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+/*----------------*/
+
+.model_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+    transform: scale(0);
+}
+
+.model_container .model{
+    height: 400px;
+    max-width: 350px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.model_container .model h3{
+    color: black;
+    margin: 20px 0;
+
+}
+
+.model_container .model button{
+    height: 35px;
+    width: 120px;
+    background-color: #dc3545;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.model_container .model button:hover{
+    opacity: .8;
+}
+
+#close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #dc3545;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    bottom:0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: red;
+    position: absolute;
+
+}
+
+#open{
+    height: 50px;
+    width: 180px;
+    background-color: #b6d4fe;
+    color: black;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+
+#open:hover{
+    letter-spacing: 4px;
+    opacity: .8;
+}
