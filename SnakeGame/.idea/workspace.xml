@@ -53,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Internet Technology Documents/JS/SampleSnakeGame/jquery-snake-game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -77,7 +77,10 @@
       <workItem from="1648904825078" duration="3295000" />
       <workItem from="1648973663129" duration="12213000" />
       <workItem from="1649039452972" duration="57000" />
-      <workItem from="1649145508730" duration="20470000" />
+      <workItem from="1649145508730" duration="21204000" />
+      <workItem from="1649188770949" duration="628000" />
+      <workItem from="1649406669545" duration="228000" />
+      <workItem from="1649428439092" duration="1002000" />
     </task>
     <servers />
   </component>

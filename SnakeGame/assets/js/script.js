@@ -3,9 +3,9 @@ const ctx = canvas.getContext('2d');
 
 /*create main snake by array with 3 boxes*/
 var snake=[
-    {offsetX:50, offsetY:60,oldX:0, oldY:0},
-    {offsetX:50, offsetY:50,oldX:0, oldY:0},
-    {offsetX:50, offsetY:40,oldX:0, oldY:0},
+    {offsetX:50, offsetY:30,oldX:0, oldY:0},
+    {offsetX:50, offsetY:20,oldX:0, oldY:0},
+    {offsetX:50, offsetY:10,oldX:0, oldY:0},
 ];
 
 var food = {offsetX:100, offsetY:100}
@@ -30,8 +30,8 @@ function createSnake() {
     }
 }
 
-setInterval(move,400);
-var stop = setInterval(moveDown,400);
+setInterval(move,300);
+var stop = setInterval(moveDown,300);
 
 function move() {
     clearCanvas();
@@ -102,16 +102,19 @@ function gameOver() {
 
                 snake[0].offsetX = 50;
                 snake[0].oldX = 0;
-                snake[0].offsetY = 60;
+                snake[0].offsetY = 30;
                 snake[0].oldY = 0;
                 snake[1].offsetX = 50;
                 snake[1].oldX = 0;
-                snake[1].offsetY = 50;
+                snake[1].offsetY = 20;
                 snake[1].oldY = 0;
                 snake[2].offsetX = 50;
                 snake[2].oldX = 0;
-                snake[2].offsetY = 40;
+                snake[2].offsetY = 10;
                 snake[2].oldY = 0;
+
+                food.offsetY = 100;
+                food.offsetX = 100;
 
                 keyPress = "ArrowDown";
 
