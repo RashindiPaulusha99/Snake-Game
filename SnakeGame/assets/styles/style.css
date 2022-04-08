@@ -53,6 +53,8 @@
     border: 2px solid white;
     font-weight: bolder;
     font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
 }
 
 /*----------------*/
@@ -66,7 +68,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0,0,0,.8);
     transform: scale(0);
 }
 

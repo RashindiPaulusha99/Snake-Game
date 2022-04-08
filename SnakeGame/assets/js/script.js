@@ -18,7 +18,10 @@ var score = 0;
 
 var keyPress = "ArrowDown";
 
+var start = null;
+
 createSnake();
+createFood();
 /*visible snake*/
 function createSnake() {
 
@@ -97,35 +100,40 @@ function gameOver() {
 
         if (i != 0){
             if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ){
+                
+                $('.model_container').css('transform','scale(1)');
 
-                alert("game over");
+                if (ok==="ok"){
+                    console.log("hari");
+                    $('.model_container').css('transform','scale(0)');
+                    ok=null;
+                    snake[0].offsetX = 50;
+                    snake[0].oldX = 0;
+                    snake[0].offsetY = 30;
+                    snake[0].oldY = 0;
+                    snake[1].offsetX = 50;
+                    snake[1].oldX = 0;
+                    snake[1].offsetY = 20;
+                    snake[1].oldY = 0;
+                    snake[2].offsetX = 50;
+                    snake[2].oldX = 0;
+                    snake[2].offsetY = 10;
+                    snake[2].oldY = 0;
 
-                snake[0].offsetX = 50;
-                snake[0].oldX = 0;
-                snake[0].offsetY = 30;
-                snake[0].oldY = 0;
-                snake[1].offsetX = 50;
-                snake[1].oldX = 0;
-                snake[1].offsetY = 20;
-                snake[1].oldY = 0;
-                snake[2].offsetX = 50;
-                snake[2].oldX = 0;
-                snake[2].offsetY = 10;
-                snake[2].oldY = 0;
+                    food.offsetY = 100;
+                    food.offsetX = 100;
 
-                food.offsetY = 100;
-                food.offsetX = 100;
+                    keyPress = "ArrowDown";
 
-                keyPress = "ArrowDown";
+                    move();
 
-                move();
+                    score = 0;
+                    $("#score").text(0);
 
-                score = 0;
-                $("#score").text(0);
-
-                if (snake.length > 3) {
-                    for (var i = 0; i < snake.length; i++) {
-                        snake.splice(i + 3, snake.length - 3);
+                    if (snake.length > 3) {
+                        for (var i = 0; i < snake.length; i++) {
+                            snake.splice(i + 3, snake.length - 3);
+                        }
                     }
                 }
             }
@@ -172,10 +180,28 @@ $(document).keydown(function (e) {
     keyPress = e.key;
 });
 
+var ok = null;
+$("#btnOk").on('click',function () {
+    ok = "ok";
+    console.log("ok una");
+    console.log(ok);
+});
+
 /*clear previous box of snake when it move*/
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+$("#btnCancel").click(function () {
+    $('.model_container').css('transform','scale(0)');
+});
+
+$("#close").click(function () {
+    $('.model_container').css('transform','scale(0)');
+});
+
+
+
 
 
 
