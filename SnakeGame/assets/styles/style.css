@@ -45,7 +45,7 @@
     color: white;
     background: cadetblue;
     position: absolute;
-    top: 50px;
+    top: 126px;
     left: 50px;
     width: 100px;
     height: 50px;
@@ -55,6 +55,7 @@
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    z-index: 1;
 }
 
 /*----------------*/
