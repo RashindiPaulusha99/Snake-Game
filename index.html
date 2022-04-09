@@ -30,26 +30,29 @@
 </head>
 <body>
 
-<button type="button" id="btnStart">START</button>
+<section>
+    <button type="button" id="btnStart">START</button>
 
-<h1 id="main_title">SNAKE GAME</h1>
+    <h1 id="main_title">SNAKE GAME</h1>
 
-<img src="assets/images/snek-2.jpg" alt="" id="image">
+    <img src="assets/images/greenBg.jpg" alt="" id="image">
 
-<div id="main_container">
-    <canvas id="canvas"></canvas>
-</div>
-<p id="scoreTitle">Score: <b id="score">0</b></p>
-
-<div class="model_container">
-    <div class="model">
-        <h3>GAME OVER</h3>
-        <p>Start Again</p>
-        <button type="button" id="btnOk">Ok</button>
-        <button type="button" id="btnCancel">Cancel</button>
-        <button type="button" id="close">close</button>
+    <div id="main_container">
+        <canvas id="canvas"></canvas>
     </div>
-</div>
+    <p id="scoreTitle">Score: <b id="score">0</b></p>
+
+    <div class="model_container">
+        <div class="model">
+            <h3>GAME OVER</h3>
+            <p>Start Again</p>
+            <button type="button" id="btnOk">Ok</button>
+            <button type="button" id="btnCancel">Cancel</button>
+            <button type="button" id="close">close</button>
+        </div>
+    </div>
+
+</section>
 
 <script src="assets/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/js/script.js"></script>
