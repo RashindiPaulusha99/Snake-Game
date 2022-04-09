@@ -5,12 +5,50 @@
     <title>Home</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+        #main_title{
+            font-size: 70px;
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 985px;
+            margin: 0;
+            z-index: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            background: url(assets/images/back.png);
+            background-position: 0 0;
+            -webkit-background-clip: text;
+            animation: back 10s linear infinite;
+        }
+    </style>
 </head>
 <body>
 
 <section id="homePage">
 
+    <div id="container">
+        <img src="assets/images/Spinner-3.gif" alt="" id="loader">
+    </div>
+
+    <img src="assets/images/cartoon-snake.jpg" alt="" id="homePageBg">
+    <img src="assets/images/startboard.png" alt="" id="startBoard">
+    <img src="assets/images/header1.png" alt="" id="header">
+    <h1 id="main_title">SNAKE GAME</h1>
+
 </section>
+
+
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(window).on('load',function () {
+        $("#container").fadeOut(1000);
+    });
+</script>
 
 </body>
 </html>
