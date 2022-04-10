@@ -247,7 +247,6 @@
 #main_snake_div{
     display: flex;
     flex-direction: row;
-    background-color: black;
     width: 1000px;
     height: 200px;
     justify-content: space-around;
@@ -289,7 +288,6 @@ body > section > div:nth-child(2) > div > img{
 body > section > div:nth-child(3){
     display: flex;
     flex-direction: row;
-    background-color: #5f3f3f;
     width: 1000px;
     height: 190px;
     justify-content: space-around;
@@ -302,12 +300,11 @@ body > section > div:nth-child(3){
 }
 
 body > section > div:nth-child(3) > div{
-    background-color: #f1a899;
     width: 230px;
     height: 190px;
 }
 
-body > section > div:nth-child(3) > div > img{
+body > section > div:nth-child(3) > div > img:nth-child(1){
     width: 280px;
     height: 280px;
     background-size: cover;
@@ -334,6 +331,47 @@ body > section > div:nth-child(3) > div > img{
     top: -49px;
     left: 735px;
 }
+
+body > section > div:nth-child(3) > div > img:nth-child(2){
+    width: 218px;
+    height: 218px;
+    background-size: cover;
+    filter: drop-shadow(-5px 18px 13px black);
+    position: absolute;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+body > section > div:nth-child(3) > div > img:nth-child(2):hover{
+    transition-property: width,height;
+    width:230px ;
+    height:230px ;
+    transition-duration: 1s;
+}
+
+#button1{
+    top: 45px;
+    left: 70px;
+}
+
+#button2{
+    top: -61px;
+    left: 318px;
+}
+
+#button3{
+    top: -60px;
+    left: 464px;
+}
+
+#button4{
+    top: 45px;
+    left: 715px;
+}
+
+/*----------------------------*/
+
 
 
 
