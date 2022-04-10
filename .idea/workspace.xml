@@ -20,18 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-positive-interface-click-1112.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-select-click-1109.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/buttons (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/buttons (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/buttons (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/buttons (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/colours.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/original.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/speed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/colours.html" beforeDir="false" afterPath="$PROJECT_DIR$/colours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,14 +56,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/audio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audeo" />
-      <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\css" />
     </key>
@@ -101,7 +94,7 @@
       <workItem from="1649516764312" duration="6879000" />
       <workItem from="1649578141270" duration="1966000" />
       <workItem from="1649580621067" duration="495000" />
-      <workItem from="1649581305082" duration="6488000" />
+      <workItem from="1649581305082" duration="9573000" />
     </task>
     <servers />
   </component>

@@ -147,6 +147,7 @@
 #homePageBg{
     width: 100%;
     height: 717px;
+    background-size: auto;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
@@ -372,9 +373,53 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 
 /*----------------------------*/
 
+#speed{
+    width: 100%;
+    height: 100vh;
+}
 
+#speedBgImage{
+    width: 100%;
+    height: 717px;
+}
 
+#speed_header{
+    position: absolute;
+    top: 0;
+    bottom: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 550px;
+    height: 190px;
+    filter: drop-shadow(-1px 18px 13px black);
+}
 
+#speed_heading{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: drop-shadow(-1px 18px 13px black);
+    font-style: oblique;
+    font-family: 'Courgette', cursive;
+}
 
-
-
+#main_speed_div{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 200px;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
