@@ -411,11 +411,8 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 }
 
 #main_speed_div{
-    /*display: flex;
-    flex-direction: column;*/
     width: 500px;
     height: 700px;
-    /*justify-content: space-around;*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -503,4 +500,60 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
     width: 400px;
     height: 371px;
     filter: drop-shadow(-1px 18px 13px black);
+}
+
+#speed_btn1_image{
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(-1px 18px 13px black);
+    position: absolute;
+    top: -29px;
+    right: -156px;
+    cursor: pointer;
+    transition-property: width,height;
+    transition-duration: 1s;
+}
+
+#speed_btn1_image:hover{
+    transition-property: width,height;
+    transition-duration: 1s;
+    width: 110px;
+    height: 110px;
+}
+
+#speed_btn2_image{
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(-1px 18px 13px black);
+    position: absolute;
+    top: -25px;
+    right: -156px;
+    cursor: pointer;
+    transition-property: width,height;
+    transition-duration: 1s;
+}
+#speed_btn2_image:hover{
+    transition-property: width,height;
+    transition-duration: 1s;
+    width: 110px;
+    height: 110px;
+}
+
+#speed_btn3_image{
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(-1px 18px 13px black);
+    position: absolute;
+    top: -20px;
+    right: -156px;
+    cursor: pointer;
+    transition-property: width,height;
+    transition-duration: 1s;
+}
+
+#speed_btn3_image:hover{
+    transition-property: width,height;
+    transition-duration: 1s;
+    width: 110px;
+    height: 110px;
 }

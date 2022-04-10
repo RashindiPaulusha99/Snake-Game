@@ -1,19 +1,14 @@
-$("#button1").on('click',function () {
-    var sound1 = $("#click_Colour_btn")[0];
-    sound1.play();
+$("#speed_btn1_image").on('click',function () {
+    var btn_Sound1 = $("#click_Speed_btn")[0];
+    btn_Sound1.play();
 });
 
-$("#button2").on('click',function () {
-    var sound2 = $("#click_Colour_btn")[0];
-    sound2.play();
+$("#speed_btn2_image").on('click',function () {
+    var btn_Sound2 = $("#click_Speed_btn")[0];
+    btn_Sound2.play();
 });
 
-$("#button3").on('click',function () {
-    var sound3 = $("#click_Colour_btn")[0];
-    sound3.play();
-});
-
-$("#button4").on('click',function () {
-    var sound4 = $("#click_Colour_btn")[0];
-    sound4.play();
+$("#speed_btn3_image").on('click',function () {
+    var btn_Sound3 = $("#click_Speed_btn")[0];
+    btn_Sound3.play();
 });
