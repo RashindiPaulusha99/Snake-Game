@@ -387,7 +387,7 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
     position: absolute;
     top: 0;
     bottom: 500px;
-    left: 0;
+    left: 350px;
     right: 0;
     margin: auto;
     width: 550px;
@@ -402,7 +402,7 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
     position: absolute;
     top: 70px;
     bottom: 0;
-    left: 0;
+    left: 350px;
     right: 0;
     margin: auto;
     filter: drop-shadow(-1px 18px 13px black);
@@ -411,15 +411,96 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 }
 
 #main_speed_div{
-    display: flex;
-    flex-direction: row;
-    width: 1000px;
-    height: 200px;
-    justify-content: space-around;
+    /*display: flex;
+    flex-direction: column;*/
+    width: 500px;
+    height: 700px;
+    /*justify-content: space-around;*/
     position: absolute;
     top: 0;
-    bottom: 100px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+}
+
+#wood_stand_image{
+    background-size: cover;
+    filter: drop-shadow(-1px 18px 13px black);
+    width: 600px;
+    height: 650px;
+    position: absolute;
+    top: 50px;
+    left: -466px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#wood_standCute_image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 500px;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 700px;
+    filter: drop-shadow(-1px 18px 13px black);
+}
+
+#main_speed_div > div{
+    width: 250px;
+    height: 50px;
+}
+
+#speed_div1{
+    position: absolute;
+    top: 179px;
+    left: -976px;
+    right: 0;
+    margin: auto;
+}
+
+#speed_div2{
+    position: absolute;
+    top: 260px;
+    left: -976px;
+    right: 0;
+    margin: auto;
+}
+
+#speed_div3{
+    position: absolute;
+    top: 341px;
+    left: -976px;
+    right: 0;
+    margin: auto;
+}
+
+#speed1_image{
+    position: absolute;
+    top: -285px;
+    left: -64px;
+    width: 400px;
+    height: 371px;
+    filter: drop-shadow(-1px 18px 13px black);
+}
+
+#speed2_image{
+    position: absolute;
+    top: 28px;
+    right: -89px;
+    width: 400px;
+    height: 371px;
+    z-index: 1;
+    filter: drop-shadow(-1px 18px 13px black);
+}
+
+#speed3_image{
+    position: absolute;
+    top: -253px;
+    right: -89px;
+    width: 400px;
+    height: 371px;
+    filter: drop-shadow(-1px 18px 13px black);
 }
