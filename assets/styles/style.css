@@ -339,16 +339,9 @@ body > section > div:nth-child(3) > div > img:nth-child(2){
     background-size: cover;
     filter: drop-shadow(-5px 18px 13px black);
     position: absolute;
-    transition-property: width,height;
+    transition-property: width,height,top,left;
     transition-duration: 1s;
     cursor: pointer;
-}
-
-body > section > div:nth-child(3) > div > img:nth-child(2):hover{
-    transition-property: width,height;
-    width:230px ;
-    height:230px ;
-    transition-duration: 1s;
 }
 
 #button1{
@@ -356,9 +349,23 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
     left: 70px;
 }
 
+#button1:hover{
+    width:200px ;
+    height:200px ;
+    top: 50px;
+    left: 75px;
+}
+
 #button2{
-    top: -61px;
+    top: -60px;
     left: 318px;
+}
+
+#button2:hover{
+    width:200px;
+    height:200px;
+    top: -45px;
+    left: 325px;
 }
 
 #button3{
@@ -366,9 +373,23 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
     left: 464px;
 }
 
+#button3:hover{
+    width:200px;
+    height:200px;
+    top: -45px;
+    left: 475px;
+}
+
 #button4{
     top: 45px;
     left: 715px;
+}
+
+#button4:hover{
+    width:200px ;
+    height:200px ;
+    top: 50px;
+    left: 725px;
 }
 
 /*----------------------------*/
@@ -517,8 +538,8 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 #speed_btn1_image:hover{
     transition-property: width,height;
     transition-duration: 1s;
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
 }
 
 #speed_btn2_image{
@@ -535,8 +556,8 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 #speed_btn2_image:hover{
     transition-property: width,height;
     transition-duration: 1s;
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
 }
 
 #speed_btn3_image{
@@ -554,6 +575,9 @@ body > section > div:nth-child(3) > div > img:nth-child(2):hover{
 #speed_btn3_image:hover{
     transition-property: width,height;
     transition-duration: 1s;
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
 }
+
+/*---------------------------*/
+
