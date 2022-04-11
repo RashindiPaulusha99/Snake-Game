@@ -20,8 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-chewing-something-crunchy-2244.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/EverlastingBlushingEarthworm-m-unscreen.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/button_panel1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/button_panel2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/button_panel3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/button_panel4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gamebg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gamebg3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/hourglass-unscreen.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/output-onlinegiftools.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/snake_head.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +70,9 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
@@ -91,7 +107,11 @@
       <workItem from="1649516764312" duration="6879000" />
       <workItem from="1649578141270" duration="1966000" />
       <workItem from="1649580621067" duration="495000" />
-      <workItem from="1649581305082" duration="18532000" />
+      <workItem from="1649581305082" duration="20469000" />
+      <workItem from="1649659810988" duration="15000" />
+      <workItem from="1649659904580" duration="2000" />
+      <workItem from="1649660092231" duration="10000" />
+      <workItem from="1649660137859" duration="7217000" />
     </task>
     <servers />
   </component>
@@ -115,10 +135,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1649589876198" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649526428764">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649663300399">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649526428764" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649663300399" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1649147531020">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

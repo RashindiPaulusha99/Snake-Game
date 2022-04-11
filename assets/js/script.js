@@ -8,7 +8,7 @@ var snake=[
     {offsetX:50, offsetY:10,oldX:0, oldY:0},
 ];
 
-var food = {offsetX:100, offsetY:100}
+var food = {offsetX:100, offsetY:100,eaten:false}
 
 var snakeWidth = 10;
 var snakeHeight = 10;
@@ -31,10 +31,11 @@ function createSnake() {
     }
 }
 
-/*setInterval(move,300);
-var stop = setInterval(moveDown,300);*/
+setInterval(move,300);
+var stop = setInterval(moveDown,300);
 
 function move() {
+    $("#super").css('display','none');
     clearCanvas();
     createFood();
     gameOver();
@@ -48,17 +49,25 @@ function createFood() {
     /*increase score and eat food and snake makes bigger*/
     if (snake[0].offsetX == food.offsetX && snake[0].offsetY == food.offsetY){
 
+        setTimeout(playSound,100);
+
         score++;
         $("#score").text(score);
 
         snake.push({
-            offsetX: snake[snake.length-1].oldX,
-            offsetY: snake[snake.length-1].oldY
+            offsetX: snake[snake.length - 1].oldX,
+            offsetY: snake[snake.length - 1].oldY
         });
 
         generateNewPosition();
 
     }
+}
+
+function playSound() {
+    var eat = $("#eat")[0];
+    eat.play();
+    $("#super").css('display','block');
 }
 
 /*generate new random position for food*/
@@ -99,7 +108,7 @@ function gameOver() {
         if (i != 0){
             if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ){
 
-                $('.model_container').css('transform','scale(1)');
+                /*$('.model_container').css('transform','scale(1)');*/
                 clearInterval(stop);
             }
         }
@@ -180,6 +189,7 @@ $("#btnOk").on('click',function () {
 
 /*clear previous box of snake when it move*/
 function clearCanvas() {
+    /*$("#super").css('display','none');*/
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -190,11 +200,13 @@ $("#btnCancel").on('click',function () {
 $("#close").on('click',function () {
     $('.model_container').css('transform','scale(0)');
 });
-var stop;
-$("#btnStart").on('click',function () {
+/*var stop;
+setInterval(move,300);
+stop =setInterval(moveDown,300);*/
+/*$("#btnStart").on('click',function () {
     setInterval(move,300);
     stop =setInterval(moveDown,300);
-});
+});*/
 
 
 
