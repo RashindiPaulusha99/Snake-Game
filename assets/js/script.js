@@ -207,6 +207,8 @@ $("#play_mode_btn").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
     stop_move = setInterval(move,300);
     stop = setInterval(moveDown,300);
+    var play = $("#play")[0];
+    play.play();
 });
 
 $("#close_play_model").on('click',function () {
@@ -216,13 +218,33 @@ $("#close_play_model").on('click',function () {
 $("#pause_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
+    var menu = $("#menu_btn")[0];
+    menu.play();
 });
 
 $("#stop_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
+    var menu = $("#menu_btn")[0];
+    menu.play();
     $('.model_container').css('transform','scale(1)');
 });
+
+$("#play_btn").on('click',function () {
+    var menu = $("#menu_btn")[0];
+    menu.play();
+});
+
+$("#home_btn").on('click',function () {
+    var menu = $("#menu_btn")[0];
+    menu.play();
+});
+
+$("#volume_btn").on('click',function () {
+    var menu = $("#menu_btn")[0];
+    menu.play();
+});
+
 
 
 
