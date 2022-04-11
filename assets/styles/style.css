@@ -96,6 +96,87 @@
     display: none;
 }
 
+#play_btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 195px;
+    left: 4px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#play_btn:hover{
+    width: 80px;
+    height: 80px;
+}
+
+#pause_btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 160px;
+    left: 72px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#pause_btn:hover{
+    width: 80px;
+    height: 80px;
+}
+
+#home_btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 125px;
+    left: 130px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#home_btn:hover{
+    width: 80px;
+    height: 80px;
+}
+
+#stop_btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 74px;
+    left: 182px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#stop_btn:hover{
+    width: 80px;
+    height: 80px;
+}
+
+#volume_btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 8px;
+    left: 226px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#volume_btn:hover{
+    width: 80px;
+    height: 80px;
+}
+
+
 /*----------------*/
 
 .model_container{
@@ -176,6 +257,86 @@
 }
 
 /*---------------------------*/
+
+.play_model_container{
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    transform: scale(1);
+    background-size: cover;
+}
+
+#model_bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    filter: drop-shadow(-5px 18px 13px #dad55e);
+}
+
+.play_model_container .model_play{
+    height: 400px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#close_play_model{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+#play_mode_btn{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    transition-property: width,height;
+    transition-duration: 1s;
+}
+
+#play_mode_btn:hover{
+    width: 325px;
+    height: 325px;
+    cursor: pointer;
+    filter: drop-shadow(-5px 18px 13px black);
+}
+
+#play_snake{
+    width: 519px;
+    height: 684px;
+    position: absolute;
+    top: -229px;
+    left: -43px;
+    right: 0;
+    filter: drop-shadow(-5px 18px 13px black);
+}
+
+/*------------------------------*/
 
 #homePage{
     width: 100%;

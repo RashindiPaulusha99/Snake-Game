@@ -20,12 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/homebtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pausebtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/play_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/stopbtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/volumebtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-video-game-retro-click-237.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icons8-multiply-60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/frame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/frame2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/frame3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/image-processing20220118-5187--unscreen.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play_btn1 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play_btn1 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play_btn1 (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play_btn1 (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play_btn1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/playbtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -59,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/icons" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -67,11 +76,11 @@
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GDSE58\Web\TestGame\assets\icons" />
       <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audeo" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\images" />
-      <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\css" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -104,7 +113,7 @@
       <workItem from="1649659810988" duration="15000" />
       <workItem from="1649659904580" duration="2000" />
       <workItem from="1649660092231" duration="10000" />
-      <workItem from="1649660137859" duration="9303000" />
+      <workItem from="1649660137859" duration="19483000" />
     </task>
     <servers />
   </component>
@@ -128,10 +137,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1649589876198" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649663300399">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649682818675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649663300399" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649682818675" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1649147531020">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
