@@ -27,11 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add image">
-      <change afterPath="$PROJECT_DIR$/assets/images/congratulations1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/congratulations2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/stand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/victory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/win.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-medieval-show-fanfare-announcement-226.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/output-onlinegiftools (1).gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
@@ -68,13 +65,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/audio" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
+      <recent name="F:\GDSE58\Web\TestGame\assets\images" />
       <recent name="F:\GDSE58\Web\TestGame\assets\icons" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audeo" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\images" />
@@ -115,7 +112,7 @@
       <workItem from="1649659904580" duration="2000" />
       <workItem from="1649660092231" duration="10000" />
       <workItem from="1649660137859" duration="21280000" />
-      <workItem from="1649735832158" duration="35548000" />
+      <workItem from="1649735832158" duration="41335000" />
     </task>
     <task id="LOCAL-00001" summary="add image">
       <created>1649770077146</created>

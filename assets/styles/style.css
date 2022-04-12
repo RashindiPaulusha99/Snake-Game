@@ -435,12 +435,12 @@
 }
 
 .high_score_title{
-    color: white;
     font-size: 28px;
     position: absolute;
     bottom: 312px;
     right: 179px;
     margin: auto;
+    color: white;
 }
 
 .high_score{
@@ -511,6 +511,7 @@
     width: 600px;
     height: 600px;
     filter: drop-shadow(-5px 18px 13px #dad55e);
+    z-index: 1;
 }
 
 .win_container .model{
@@ -553,7 +554,7 @@
     width: 400px;
     height: 265px;
     position: absolute;
-    top: -70px;
+    top: -63px;
     left: -115px;
     right: 0;
     bottom: 0;
@@ -564,13 +565,14 @@
 #start_text{
     color: white;
     position: absolute;
-    top: 160px;
+    top: -24px;
     left: -115px;
     right: 0;
     bottom: 0;
     margin: auto;
     font-size: 35px;
     font-family: 'Bungee Shade', cursive;
+    height: 100px;
 }
 
 #displayScore{
@@ -590,6 +592,46 @@
     right: 74px;
     margin: auto;
     z-index: 1;
+}
+
+#btnOkInWin{
+    position: absolute;
+    top: 160px;
+    left: -251px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 147px;
+    height: 132px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#btnOkInWin:hover{
+    width: 137px;
+    height: 122px;
+}
+
+#closeInWin{
+    position: absolute;
+    top: 169px;
+    left: -69px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 162px;
+    height: 172px;
+    transition-property: width,height;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#closeInWin:hover{
+    width:152px;
+    height: 162px;
 }
 
 /*------------play model styles---------------*/
@@ -641,6 +683,7 @@
     width: 30px;
     border-radius: 20px;
     border: 2px solid white;
+    cursor: pointer;
 }
 
 #play_mode_btn{

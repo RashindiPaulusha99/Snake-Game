@@ -38,9 +38,9 @@ function createSnake() {
     }
 }
 
-$('.play_model_container').css('transform','scale(0)');
+$('.play_model_container').css('transform','scale(1)');
 $('.model_container').css('transform','scale(0)');
-$('.win_container').css('transform','scale(1)');
+$('.win_container').css('transform','scale(0)');
 
 $('#play_btn').hide();
 $('#stop_btn').hide();
@@ -53,6 +53,7 @@ function move() {
     clearCanvas();
     createFood();
     gameOver();
+    gameWin();
     snakeMove();
 }
 
@@ -118,6 +119,7 @@ function moveDown() {
 }
 
 var gameover;
+var gamewin;
 /*when snake hits on own body and edge , game over */
 function gameOver() {
     for (var i in snake) {
@@ -135,10 +137,32 @@ function gameOver() {
         }
     }
 }
+
+function gameWin() {
+    if (score >= 5){
+        $('.win_container').css('transform','scale(1)');
+        $('.model_container').css('transform','scale(0)');
+        $('.play_model_container').css('transform','scale(0)');
+        $(".victory_score").text(score);
+        $(".spend_time").text($("#display_time").text());
+        clearInterval(genetate_time);
+        clearInterval(stop);
+        clearInterval(stop_move);
+        clearInterval(gamewin);
+        gamewin = setInterval(game_win_audio,100);
+    }
+}
+
 var over;
 function game_over_audio() {
     over = $("#gameover_audio")[0];
     over.play();
+}
+
+var win;
+function game_win_audio() {
+    win = $("#gamewin")[0];
+    win.play();
 }
 
 /*snake moving to down, up, left, right*/
@@ -216,7 +240,7 @@ function again(){
     }
 }
 
-$("#btnOk").on('click',function () {
+$(".btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     again();
     clearInterval(genetate_time);
@@ -225,7 +249,17 @@ $("#btnOk").on('click',function () {
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
-    over.pause();
+});
+
+$("#btnOkInWin").on('click',function () {
+    $('.win_container').css('transform','scale(0)');
+    again();
+    clearInterval(genetate_time);
+    clearInterval(gamewin);
+    genetate_time = setInterval(setTime,1000);
+    $(".victory_score").text(0);
+    $(".spend_time").text(0);
+    play.play();
 });
 
 /*clear previous box of snake when it move*/
@@ -233,16 +267,17 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-$("#btnCancel").on('click',function () {
+$(".close").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     clearInterval(gameover);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
+    play.play();
 });
 
-$("#close").on('click',function () {
-    $('.model_container').css('transform','scale(0)');
-    clearInterval(gameover);
+$("#closeInWin").on('click',function () {
+    $('.win_container').css('transform','scale(0)');
+    clearInterval(gamewin);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
@@ -267,6 +302,16 @@ $("#play_mode_btn").on('click',function () {
 
 $("#close_play_model").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
+});
+
+$(".close_over_model").on('click',function () {
+    $('.play_model_container').css('transform','scale(0)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)')
+    clearInterval(genetate_time);
+    clearInterval(gameover);
+    clearInterval(gamewin);
+    genetate_time = setInterval(setTime,1000);
 });
 
 $("#stop_btn").on('click',function () {
