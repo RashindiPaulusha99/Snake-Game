@@ -15,11 +15,17 @@ var snakeHeight = 10;
 
 var gap = 10;
 var score = 0;
+var time=0;
 
 var keyPress = "ArrowDown";
 
 createSnake();
 createFood();
+setTime();
+
+function setTime() {
+    $("#display_time").text(time++);
+}
 /*visible snake*/
 function createSnake() {
 
@@ -32,6 +38,12 @@ function createSnake() {
 }
 
 $('.play_model_container').css('transform','scale(1)');
+
+$('#play_btn').hide();
+$('#stop_btn').hide();
+$('#pause_btn').hide();
+$('#home_btn').hide();
+$('#volume_btn').hide();
 
 function move() {
     $("#super").css('display','none');
@@ -108,8 +120,7 @@ function gameOver() {
             if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ){
 
                 $('.model_container').css('transform','scale(1)');
-                clearInterval(stop);
-                clearInterval(stop_move);
+                clearInterval(genetate_time);
             }
         }
     }
@@ -154,8 +165,7 @@ $(document).keydown(function (e) {
     keyPress = e.key;
 });
 
-$("#btnOk").on('click',function () {
-    $('.model_container').css('transform','scale(0)');
+function again(){
 
     snake[0].offsetX = 50;
     snake[0].oldX = 0;
@@ -178,13 +188,20 @@ $("#btnOk").on('click',function () {
     move();
 
     score = 0;
+    time = 0;
     $("#score").text(0);
+    $("#display_time").text(0);
 
     if (snake.length > 3) {
         for (var i = 0; i < snake.length; i++) {
             snake.splice(i + 3, snake.length - 3);
         }
     }
+}
+
+$("#btnOk").on('click',function () {
+    $('.model_container').css('transform','scale(0)');
+    again();
 });
 
 /*clear previous box of snake when it move*/
@@ -202,11 +219,17 @@ $("#close").on('click',function () {
 
 var stop;
 var stop_move;
+var genetate_time;
 
 $("#play_mode_btn").on('click',function () {
+    clearInterval(stop);
+    clearInterval(stop_move);
+    clearInterval(genetate_time);
     $('.play_model_container').css('transform','scale(0)');
     stop_move = setInterval(move,300);
     stop = setInterval(moveDown,300);
+    genetate_time = setInterval(setTime,1000);
+    again();
     var play = $("#play")[0];
     play.play();
 });
@@ -215,22 +238,29 @@ $("#close_play_model").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
 });
 
-$("#pause_btn").on('click',function () {
-    clearInterval(stop);
-    clearInterval(stop_move);
-    var menu = $("#menu_btn")[0];
-    menu.play();
-});
-
 $("#stop_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
+    clearInterval(genetate_time);
+    $('.play_model_container').css('transform','scale(1)');
     var menu = $("#menu_btn")[0];
     menu.play();
-    $('.model_container').css('transform','scale(1)');
 });
 
 $("#play_btn").on('click',function () {
+    clearInterval(stop);
+    clearInterval(stop_move);
+    clearInterval(genetate_time);
+    stop_move = setInterval(move,300);
+    stop = setInterval(moveDown,300);
+    genetate_time = setInterval(setTime,1000);
+    var menu = $("#menu_btn")[0];
+    menu.play();
+});
+
+$("#pause_btn").on('click',function () {
+    clearInterval(stop_move);
+    clearInterval(genetate_time);
     var menu = $("#menu_btn")[0];
     menu.play();
 });
@@ -245,6 +275,15 @@ $("#volume_btn").on('click',function () {
     menu.play();
 });
 
+$("#menu").on('click',function () {
+    var menu_sound = $("#menu_sound")[0];
+    menu_sound.play();
+    $('#play_btn').toggle('slow');
+    $('#stop_btn').toggle('slow');
+    $('#pause_btn').toggle('slow');
+    $('#home_btn').toggle('slow');
+    $('#volume_btn').toggle('slow');
+});
 
 
 
