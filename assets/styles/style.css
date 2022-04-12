@@ -1,3 +1,5 @@
+/*---------index page styles---------*/
+
 @keyframes back {
     100%{
         background-position: 2000px 0;
@@ -248,13 +250,42 @@
     margin: auto;
 }
 
+#display_speedHeader{
+    position: absolute;
+    top: 250px;
+    left: 94px;
+    color: white;
+    font-size: 27px;
+}
 
-/*----------------*/
+#display_speed{
+    position: absolute;
+    top: 280px;
+    left: 127px;
+    color: white;
+    font-size: 30px;
+}
+
+#display_foodHeader{
+    position: absolute;
+    top: 330px;
+    left: 91px;
+    color: white;
+    font-size: 27px;
+}
+
+#display_foodQty{
+    position: absolute;
+    top: 360px;
+    left: 127px;
+    color: white;
+    font-size: 30px;
+}
+
+
+/*--------game over styles--------*/
 
 .model_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     width: 100vw;
     position: fixed;
@@ -262,6 +293,7 @@
     left: 0;
     background-color: rgba(0,0,0,.8);
     transform: scale(0);
+    background-size: cover;
 }
 
 .model_container .model{
@@ -328,7 +360,7 @@
     width: 100px;
 }
 
-/*---------------------------*/
+/*------------play model styles---------------*/
 
 .play_model_container{
     min-height: 100vh;
@@ -410,7 +442,7 @@
     filter: drop-shadow(-5px 18px 13px black);
 }
 
-/*------------------------------*/
+/*--------------welcome page styles----------------*/
 
 #homePage{
     width: 100%;
@@ -479,7 +511,7 @@
     margin: auto;
 }
 
-/*------------------------*/
+/*------------colour page styles------------*/
 
 #colours{
     width: 100%;
@@ -665,7 +697,7 @@ body > section > div:nth-child(3) > div > img:nth-child(2){
     left: 725px;
 }
 
-/*----------------------------*/
+/*--------------speed page styles--------------*/
 
 #speed{
     width: 100%;
@@ -826,6 +858,7 @@ body > section > div:nth-child(3) > div > img:nth-child(2){
     transition-property: width,height;
     transition-duration: 1s;
 }
+
 #speed_btn2_image:hover{
     transition-property: width,height;
     transition-duration: 1s;

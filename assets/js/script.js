@@ -16,6 +16,7 @@ var snakeHeight = 10;
 var gap = 10;
 var score = 0;
 var time=0;
+var foods = 0;
 
 var keyPress = "ArrowDown";
 
@@ -37,7 +38,8 @@ function createSnake() {
     }
 }
 
-$('.play_model_container').css('transform','scale(1)');
+$('.play_model_container').css('transform','scale(0)');
+$('.model_container').css('transform','scale(1)');
 
 $('#play_btn').hide();
 $('#stop_btn').hide();
@@ -62,8 +64,10 @@ function createFood() {
 
         setTimeout(playSound,100);
 
-        score++;
+        score+=2;
+        foods++;
         $("#score").text(score);
+        $("#display_foodQty").text(foods);
 
         snake.push({
             offsetX: snake[snake.length - 1].oldX,
@@ -189,7 +193,9 @@ function again(){
 
     score = 0;
     time = 0;
+    foods = 0;
     $("#score").text(0);
+    $("#display_foodQty").text(0);
     $("#display_time").text(0);
 
     if (snake.length > 3) {

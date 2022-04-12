@@ -20,10 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/audio/mixkit-video-game-mystery-alert-234.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/5196-4P-1-Wood-Texture.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/time.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
@@ -105,7 +101,7 @@
       <workItem from="1649659904580" duration="2000" />
       <workItem from="1649660092231" duration="10000" />
       <workItem from="1649660137859" duration="21280000" />
-      <workItem from="1649735832158" duration="14823000" />
+      <workItem from="1649735832158" duration="18606000" />
     </task>
     <servers />
   </component>
