@@ -38,8 +38,9 @@ function createSnake() {
     }
 }
 
-$('.play_model_container').css('transform','scale(0)');
-$('.model_container').css('transform','scale(1)');
+$('.play_model_container').css('transform','scale(1)');
+$('.model_play').css('transform','scale(0)');
+/*$('.win_container').css('transform','scale(0)');*/
 
 $('#play_btn').hide();
 $('#stop_btn').hide();
@@ -116,6 +117,7 @@ function moveDown() {
     }
 }
 
+var gameover;
 /*when snake hits on own body and edge , game over */
 function gameOver() {
     for (var i in snake) {
@@ -124,10 +126,19 @@ function gameOver() {
             if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ){
 
                 $('.model_container').css('transform','scale(1)');
+                $(".victory_score").text(score);
+                $(".spend_time").text($("#display_time").text());
                 clearInterval(genetate_time);
+                clearInterval(gameover);
+                gameover = setInterval(game_over_audio,100);
             }
         }
     }
+}
+var over;
+function game_over_audio() {
+    over = $("#gameover_audio")[0];
+    over.play();
 }
 
 /*snake moving to down, up, left, right*/
@@ -208,6 +219,13 @@ function again(){
 $("#btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     again();
+    clearInterval(genetate_time);
+    clearInterval(gameover);
+    genetate_time = setInterval(setTime,1000);
+    $(".victory_score").text(0);
+    $(".spend_time").text(0);
+    play.play();
+    over.pause();
 });
 
 /*clear previous box of snake when it move*/
@@ -217,15 +235,23 @@ function clearCanvas() {
 
 $("#btnCancel").on('click',function () {
     $('.model_container').css('transform','scale(0)');
+    clearInterval(gameover);
+    $(".victory_score").text(0);
+    $(".spend_time").text(0);
 });
 
 $("#close").on('click',function () {
     $('.model_container').css('transform','scale(0)');
+    clearInterval(gameover);
+    $(".victory_score").text(0);
+    $(".spend_time").text(0);
+    play.play();
 });
 
 var stop;
 var stop_move;
 var genetate_time;
+var play = $("#play")[0];
 
 $("#play_mode_btn").on('click',function () {
     clearInterval(stop);
@@ -236,7 +262,6 @@ $("#play_mode_btn").on('click',function () {
     stop = setInterval(moveDown,300);
     genetate_time = setInterval(setTime,1000);
     again();
-    var play = $("#play")[0];
     play.play();
 });
 
