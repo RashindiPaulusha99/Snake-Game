@@ -38,9 +38,9 @@ function createSnake() {
     }
 }
 
-$('.play_model_container').css('transform','scale(1)');
-$('.model_play').css('transform','scale(0)');
-/*$('.win_container').css('transform','scale(0)');*/
+$('.play_model_container').css('transform','scale(0)');
+$('.model_container').css('transform','scale(0)');
+$('.win_container').css('transform','scale(1)');
 
 $('#play_btn').hide();
 $('#stop_btn').hide();
