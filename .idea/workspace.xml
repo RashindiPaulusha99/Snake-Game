@@ -27,6 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add food qty">
+      <change beforePath="$PROJECT_DIR$/colours.html" beforeDir="false" afterPath="$PROJECT_DIR$/colours.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <list id="33b4a564-6d49-4f3f-b23a-1fc89593cff6" name="add image" comment="" />
@@ -108,7 +109,7 @@
       <workItem from="1649660092231" duration="10000" />
       <workItem from="1649660137859" duration="21280000" />
       <workItem from="1649735832158" duration="41591000" />
-      <workItem from="1649820324330" duration="5011000" />
+      <workItem from="1649820324330" duration="5148000" />
     </task>
     <task id="LOCAL-00001" summary="add image">
       <created>1649770077146</created>
