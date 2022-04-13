@@ -30,9 +30,9 @@ function setTime() {
 
 /*visible snake*/
 function createSnake() {
-
+    console.log(snakeColour);
     for (var i = 0; i < snake.length; i++) {
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = snakeColour;
         ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
         ctx.strokeStyle='white';
         ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
@@ -42,6 +42,9 @@ function createSnake() {
 $('.play_model_container').css('transform','scale(1)');
 $('.model_container').css('transform','scale(0)');
 $('.win_container').css('transform','scale(0)');
+
+$("#display_speed").text(snakeSpeed);
+console.log(snakeSpeed);
 
 $('#play_btn').hide();
 $('#stop_btn').hide();
@@ -60,7 +63,7 @@ function move() {
 
 var stop_eat_sound;
 function createFood() {
-    ctx.fillStyle = 'yellow';
+    ctx.fillStyle = 'orange';
     ctx.fillRect(food.offsetX, food.offsetY,snakeWidth, snakeHeight);
 
     /*increase score and eat food and snake makes bigger*/
@@ -180,7 +183,7 @@ function snakeMove() {
 
     for (var i = 0; i <snake.length ; i++) {
 
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = snakeColour;
         ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
         ctx.strokeRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
 
@@ -303,8 +306,8 @@ $("#play_mode_btn").on('click',function () {
     clearInterval(stop_move);
     clearInterval(genetate_time);
     $('.play_model_container').css('transform','scale(0)');
-    stop_move = setInterval(move,300);
-    stop = setInterval(moveDown,300);
+    stop_move = setInterval(move,snakeSpeed);
+    stop = setInterval(moveDown,snakeSpeed);
     genetate_time = setInterval(setTime,1000);
     again();
     play.play();
@@ -337,8 +340,8 @@ $("#play_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
     clearInterval(genetate_time);
-    stop_move = setInterval(move,300);
-    stop = setInterval(moveDown,300);
+    stop_move = setInterval(move,snakeSpeed);
+    stop = setInterval(moveDown,snakeSpeed);
     genetate_time = setInterval(setTime,1000);
     var menu = $("#menu_btn")[0];
     menu.play();
@@ -371,7 +374,84 @@ $("#menu").on('click',function () {
     $('#volume_btn').toggle('slow');
 });
 
+/*-------------------------------------------------------------------------------*/
 
+$("#playSection").css('display','none');
+$("#homePage").css('display','block');
+$("#speed").css('display','none');
+$("#colours").css('display','none');
+
+$("#startBoard").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','none');
+    $("#colours").css('display','block');
+});
+
+var snakeColour;
+$("#button1").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','block');
+    $("#colours").css('display','none');
+    snakeColour = 'red';
+    console.log(snakeColour);
+});
+
+$("#button2").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','block');
+    $("#colours").css('display','none');
+    snakeColour = 'yellow';
+    console.log(snakeColour);
+});
+
+$("#button3").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','block');
+    $("#colours").css('display','none');
+    snakeColour = 'blue';
+    console.log(snakeColour);
+});
+
+$("#button4").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','block');
+    $("#colours").css('display','none');
+    snakeColour = 'green';
+    console.log(snakeColour);
+});
+
+var snakeSpeed;
+$("#speed_btn1_image").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','block');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    snakeSpeed = 300;
+    console.log(snakeSpeed);
+});
+
+$("#speed_btn2_image").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','block');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    snakeSpeed = 500;
+    console.log(snakeSpeed);
+});
+
+$("#speed_btn3_image").on('click',function () {
+    $("#homePage").css('display','none');
+    $("#playSection").css('display','block');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    snakeSpeed = 1000;
+    console.log(snakeSpeed);
+});
 
 
 
