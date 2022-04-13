@@ -63,7 +63,7 @@ function move() {
 
 var stop_eat_sound;
 function createFood() {
-    ctx.fillStyle = 'orange';
+    ctx.fillStyle = 'black';
     ctx.fillRect(food.offsetX, food.offsetY,snakeWidth, snakeHeight);
 
     /*increase score and eat food and snake makes bigger*/
@@ -135,7 +135,7 @@ function gameOver() {
                 $('.model_container').css('transform','scale(1)');
                 $(".victory_score").text(score);
                 $(".spend_time").text($("#display_time").text());
-                clearInterval(genetate_time);
+                clearInterval(generate_time);
                 clearInterval(gameover);
                 gameover = setInterval(game_over_audio,100);
                 clearTimeout(stop_eat_sound);
@@ -150,7 +150,7 @@ function gameWin() {
         $('.model_container').css('transform','scale(0)');
         $(".victory_score").text(score);
         $(".spend_time").text($("#display_time").text());
-        clearInterval(genetate_time);
+        clearInterval(generate_time);
         clearInterval(gamewin);
         gamewin = setInterval(game_win_audio,100);
         clearTimeout(stop_eat_sound);
@@ -212,6 +212,11 @@ function snakeMove() {
     }
 }
 
+/*clear previous box of snake when it move*/
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 /*what's the pressed key*/
 $(document).keydown(function (e) {
     keyPress = e.key;
@@ -256,9 +261,9 @@ function again(){
 $("#btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     again();
-    clearInterval(genetate_time);
+    clearInterval(generate_time);
     clearInterval(gameover);
-    genetate_time = setInterval(setTime,1000);
+    generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
@@ -268,17 +273,12 @@ $("#btnOkInWin").on('click',function () {
     $('.win_container').css('transform','scale(0)');
     again();
     clearInterval(gamewin);
-    clearInterval(genetate_time);
-    genetate_time = setInterval(setTime,1000);
+    clearInterval(generate_time);
+    generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
 });
-
-/*clear previous box of snake when it move*/
-function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
 
 $("#close").on('click',function () {
     $('.model_container').css('transform','scale(0)');
@@ -298,39 +298,65 @@ $("#closeInWin").on('click',function () {
 
 var stop;
 var stop_move;
-var genetate_time;
+var generate_time;
 var play = $("#play")[0];
 
 $("#play_mode_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
-    clearInterval(genetate_time);
+    clearInterval(generate_time);
+    clearInterval(gameover);
+    clearInterval(gamewin);
+    clearTimeout(stop_eat_sound);
     $('.play_model_container').css('transform','scale(0)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
     stop_move = setInterval(move,snakeSpeed);
     stop = setInterval(moveDown,snakeSpeed);
-    genetate_time = setInterval(setTime,1000);
+    generate_time = setInterval(setTime,1000);
     again();
     play.play();
 });
 
 $("#close_play_model").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
+    $("#homePage").css('display','block');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    /*clearInterval(stop);
+    clearInterval(stop_move);*/
+    clearInterval(generate_time);
+    clearInterval(gameover);
+    clearInterval(gamewin);
+    clearTimeout(stop_eat_sound);
+    again();
+
 });
 
 $(".close_over_model").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
     $('.model_container').css('transform','scale(0)');
-    $('.win_container').css('transform','scale(0)')
-    clearInterval(genetate_time);
+    $('.win_container').css('transform','scale(0)');
+    $("#homePage").css('display','block');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    clearInterval(generate_time);
     clearInterval(gameover);
     clearInterval(gamewin);
-    genetate_time = setInterval(setTime,1000);
+    /*clearInterval(stop);
+    clearInterval(stop_move);*/
+    clearTimeout(stop_eat_sound);
+    again();
 });
 
 $("#stop_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
-    clearInterval(genetate_time);
+    clearInterval(generate_time);
     $('.play_model_container').css('transform','scale(1)');
     var menu = $("#menu_btn")[0];
     menu.play();
@@ -339,10 +365,10 @@ $("#stop_btn").on('click',function () {
 $("#play_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
-    clearInterval(genetate_time);
+    clearInterval(generate_time);
     stop_move = setInterval(move,snakeSpeed);
     stop = setInterval(moveDown,snakeSpeed);
-    genetate_time = setInterval(setTime,1000);
+    generate_time = setInterval(setTime,1000);
     var menu = $("#menu_btn")[0];
     menu.play();
 });
@@ -355,6 +381,20 @@ $("#pause_btn").on('click',function () {
 });
 
 $("#home_btn").on('click',function () {
+    $('.play_model_container').css('transform','scale(0)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
+    $("#homePage").css('display','block');
+    $("#playSection").css('display','none');
+    $("#speed").css('display','none');
+    $("#colours").css('display','none');
+    clearInterval(genetate_time);
+    clearInterval(gameover);
+    clearInterval(gamewin);
+    /*clearInterval(stop);
+    clearInterval(stop_move);*/
+    clearTimeout(stop_eat_sound);
+    again();
     var menu = $("#menu_btn")[0];
     menu.play();
 });
