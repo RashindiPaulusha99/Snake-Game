@@ -45,19 +45,11 @@ $('.play_model_container').css('transform','scale(1)');
 $('.model_container').css('transform','scale(0)');
 $('.win_container').css('transform','scale(0)');
 
-$('#play_btn').hide();
-$('#stop_btn').hide();
-$('#pause_btn').hide();
-$('#home_btn').hide();
-$('#volume_btn').hide();
-
 function move() {
     $("#super").css('display','none');
     $("#display_speed").text(snakeSpeed+'ms');
     clearCanvas();
     createFood();
-    gameOver();
-    gameWin();
     snakeMove();
 }
 
@@ -124,7 +116,6 @@ function moveDown() {
 }
 
 var gameover;
-var gamewin;
 /*when snake hits on own body and edge , game over */
 function gameOver() {
     for (var i in snake) {
@@ -136,14 +127,19 @@ function gameOver() {
                 $(".victory_score").text(score);
                 $(".spend_time").text($("#display_time").text());
                 clearInterval(generate_time);
-                clearInterval(gameover);
-                gameover = setInterval(game_over_audio,100);
                 clearTimeout(stop_eat_sound);
+                gameover = setTimeout(game_over_audio,100);
             }
         }
     }
 }
 
+function game_over_audio(){
+    var game_over = $("#gameover_audio")[0];
+    game_over.play();
+}
+
+var gamewin;
 function gameWin() {
     if (score >= 5){
         $('.win_container').css('transform','scale(1)');
@@ -151,31 +147,15 @@ function gameWin() {
         $(".victory_score").text(score);
         $(".spend_time").text($("#display_time").text());
         clearInterval(generate_time);
-        clearInterval(gamewin);
-        gamewin = setInterval(game_win_audio,100);
+        gamewin = setTimeout(game_win_audio,100);
         clearTimeout(stop_eat_sound);
-
-        for (var i in snake) {
-            if (i != 0){
-                if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ) {
-                    $('.model_container').css('transform','scale(0)');
-                    clearInterval(gameover);
-                }
-            }
-        }
+        clearTimeout(over);
     }
 }
 
-var over;
-function game_over_audio() {
-    over = $("#gameover_audio")[0];
-    over.play();
-}
-
-var win;
 function game_win_audio() {
-    win = $("#gamewin")[0];
-    win.play();
+    var win_game = $("#gamewin")[0];
+    win_game.play();
 }
 
 /*snake moving to down, up, left, right*/
@@ -262,7 +242,6 @@ $("#btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     again();
     clearInterval(generate_time);
-    clearInterval(gameover);
     generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
@@ -272,7 +251,6 @@ $("#btnOk").on('click',function () {
 $("#btnOkInWin").on('click',function () {
     $('.win_container').css('transform','scale(0)');
     again();
-    clearInterval(gamewin);
     clearInterval(generate_time);
     generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
@@ -281,18 +259,40 @@ $("#btnOkInWin").on('click',function () {
 });
 
 $("#close").on('click',function () {
-    $('.model_container').css('transform','scale(0)');
-    clearInterval(gameover);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
+    $('.play_model_container').css('transform', 'scale(0)');
+    $('.model_container').css('transform', 'scale(0)');
+    $('.win_container').css('transform', 'scale(0)');
+    clearInterval(generate_time);
+    clearTimeout(stop_eat_sound);
+    clearInterval(win);
+    clearInterval(over);
+    again();
+    $("#homePage").css('display', 'block');
+    $("#playSection").css('display', 'none');
+    $("#speed").css('display', 'none');
+    $("#colours").css('display', 'none');
+
     play.play();
 });
 
 $("#closeInWin").on('click',function () {
-    $('.win_container').css('transform','scale(0)');
-    clearInterval(gamewin);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
+    $('.play_model_container').css('transform', 'scale(0)');
+    $('.model_container').css('transform', 'scale(0)');
+    $('.win_container').css('transform', 'scale(0)');
+    clearInterval(generate_time);
+    clearTimeout(stop_eat_sound);
+    clearInterval(win);
+    clearInterval(over);
+    again();
+    $("#homePage").css('display', 'block');
+    $("#playSection").css('display', 'none');
+    $("#speed").css('display', 'none');
+    $("#colours").css('display', 'none');
+
     play.play();
 });
 
@@ -301,11 +301,13 @@ var stop_move;
 var generate_time;
 var play = $("#play")[0];
 
+var over;
+var win;
+
 $("#play_mode_btn").on('click',function () {
     clearInterval(stop);
     clearInterval(stop_move);
     clearInterval(generate_time);
-    clearInterval(gameover);
     clearInterval(gamewin);
     clearTimeout(stop_eat_sound);
     $('.play_model_container').css('transform','scale(0)');
@@ -315,7 +317,20 @@ $("#play_mode_btn").on('click',function () {
     stop = setInterval(moveDown,snakeSpeed);
     generate_time = setInterval(setTime,1000);
     again();
+
+    clearInterval(over);
+    over=setInterval(gameOver,100);
+
+    clearInterval(win);
+    win=setInterval(gameWin,100);
+
     play.play();
+
+    $('#play_btn').hide();
+    $('#stop_btn').hide();
+    $('#pause_btn').hide();
+    $('#home_btn').hide();
+    $('#volume_btn').hide();
 });
 
 $("#close_play_model").on('click',function () {
@@ -326,17 +341,46 @@ $("#close_play_model").on('click',function () {
     $("#playSection").css('display','none');
     $("#speed").css('display','none');
     $("#colours").css('display','none');
-    /*clearInterval(stop);
-    clearInterval(stop_move);*/
     clearInterval(generate_time);
-    clearInterval(gameover);
-    clearInterval(gamewin);
     clearTimeout(stop_eat_sound);
     again();
 
+    clearInterval(win);
+    clearInterval(over);
+
 });
 
-$(".close_over_model").on('click',function () {
+$("#close_over_model").on('click',function () {
+    $('.play_model_container').css('transform', 'scale(0)');
+    $('.model_container').css('transform', 'scale(0)');
+    $('.win_container').css('transform', 'scale(0)');
+    clearInterval(generate_time);
+    clearTimeout(stop_eat_sound);
+    clearInterval(win);
+    clearInterval(over);
+    again();
+    $("#homePage").css('display', 'block');
+    $("#playSection").css('display', 'none');
+    $("#speed").css('display', 'none');
+    $("#colours").css('display', 'none');
+});
+
+$("#close_win_model").on('click',function () {
+    $('.play_model_container').css('transform', 'scale(0)');
+    $('.model_container').css('transform', 'scale(0)');
+    $('.win_container').css('transform', 'scale(0)');
+    clearInterval(generate_time);
+    clearTimeout(stop_eat_sound);
+    clearInterval(win);
+    clearInterval(over);
+    again();
+    $("#homePage").css('display', 'block');
+    $("#playSection").css('display', 'none');
+    $("#speed").css('display', 'none');
+    $("#colours").css('display', 'none');
+});
+
+$("#stop_btn").on('click',function () {
     $('.play_model_container').css('transform','scale(0)');
     $('.model_container').css('transform','scale(0)');
     $('.win_container').css('transform','scale(0)');
@@ -345,21 +389,14 @@ $(".close_over_model").on('click',function () {
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     clearInterval(generate_time);
-    clearInterval(gameover);
-    clearInterval(gamewin);
-    /*clearInterval(stop);
-    clearInterval(stop_move);*/
     clearTimeout(stop_eat_sound);
-    again();
-});
 
-$("#stop_btn").on('click',function () {
-    clearInterval(stop);
-    clearInterval(stop_move);
-    clearInterval(generate_time);
-    $('.play_model_container').css('transform','scale(1)');
+    again();
     var menu = $("#menu_btn")[0];
     menu.play();
+
+    clearInterval(win);
+    clearInterval(over);
 });
 
 $("#play_btn").on('click',function () {
@@ -388,15 +425,13 @@ $("#home_btn").on('click',function () {
     $("#playSection").css('display','none');
     $("#speed").css('display','none');
     $("#colours").css('display','none');
-    clearInterval(genetate_time);
-    clearInterval(gameover);
-    clearInterval(gamewin);
-    /*clearInterval(stop);
-    clearInterval(stop_move);*/
+    clearInterval(generate_time);
     clearTimeout(stop_eat_sound);
     again();
     var menu = $("#menu_btn")[0];
     menu.play();
+    clearInterval(win);
+    clearInterval(over);
 });
 
 $("#volume_btn").on('click',function () {
@@ -466,6 +501,9 @@ $("#speed_btn1_image").on('click',function () {
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     snakeSpeed = 300;
+    $('.play_model_container').css('transform','scale(1)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
 });
 
 $("#speed_btn2_image").on('click',function () {
@@ -474,6 +512,9 @@ $("#speed_btn2_image").on('click',function () {
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     snakeSpeed = 500;
+    $('.play_model_container').css('transform','scale(1)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
 });
 
 $("#speed_btn3_image").on('click',function () {
@@ -482,6 +523,9 @@ $("#speed_btn3_image").on('click',function () {
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     snakeSpeed = 800;
+    $('.play_model_container').css('transform','scale(1)');
+    $('.model_container').css('transform','scale(0)');
+    $('.win_container').css('transform','scale(0)');
 });
 
 

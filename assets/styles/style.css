@@ -330,7 +330,7 @@
     margin: auto;
 }
 
-.close_over_model{
+#close_over_model{
     position: absolute;
     top: -58px;
     right: -124px;
@@ -528,7 +528,7 @@
     margin: auto;
 }
 
-.close_over_model{
+#close_win_model{
     position: absolute;
     top: -58px;
     right: -124px;

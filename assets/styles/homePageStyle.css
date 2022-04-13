@@ -31,10 +31,8 @@
 }
 
 #startBoard:hover{
-    transition-property: width,height;
     width:370px ;
     height:370px ;
-    transition-duration: 1s;
 }
 
 #header{
