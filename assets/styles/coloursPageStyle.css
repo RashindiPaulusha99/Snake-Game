@@ -1,0 +1,186 @@
+
+/*------------colour page styles------------*/
+
+#colours{
+    width: 100%;
+    height: 100vh;
+}
+
+#coloursBgImage{
+    width: 100%;
+    height: 717px;
+}
+
+#colours_header{
+    position: absolute;
+    top: 0;
+    bottom: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 550px;
+    height: 190px;
+    filter: drop-shadow(-1px 18px 13px black);
+}
+
+#color_heading{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: drop-shadow(-1px 18px 13px black);
+    font-style: oblique;
+    font-family: 'Courgette', cursive;
+}
+
+#main_snake_div{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 200px;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body > section > div:nth-child(2) > div{
+    width: 200px;
+    height: 200px;
+}
+
+body > section > div:nth-child(2) > div > img{
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    filter: drop-shadow(-5px 18px 13px black);
+    position: absolute;
+}
+
+#red_snake{
+    top: -205px;
+    left: -167px;
+}
+
+#blue_snake{
+    top: -205px;
+    left: 525px;
+}
+
+#green_snake{
+    left: 585px;
+}
+
+body > section > div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 190px;
+    justify-content: space-around;
+    position: absolute;
+    top: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body > section > div:nth-child(3) > div{
+    width: 230px;
+    height: 190px;
+}
+
+body > section > div:nth-child(3) > div > img:nth-child(1){
+    width: 280px;
+    height: 280px;
+    background-size: cover;
+    filter: drop-shadow(-5px 18px 13px black);
+    position: absolute;
+}
+
+#wood1{
+    top: -49px;
+    left: -14px;
+}
+
+#wood2{
+    top: -49px;
+    left: 235px;
+}
+
+#wood3{
+    top: -49px;
+    left: 486px;
+}
+
+#wood4{
+    top: -49px;
+    left: 735px;
+}
+
+body > section > div:nth-child(3) > div > img:nth-child(2){
+    width: 218px;
+    height: 218px;
+    background-size: cover;
+    filter: drop-shadow(-5px 18px 13px black);
+    position: absolute;
+    transition-property: width,height,top,left;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#button1{
+    top: 45px;
+    left: 70px;
+}
+
+#button1:hover{
+    width:200px ;
+    height:200px ;
+    top: 50px;
+    left: 75px;
+}
+
+#button2{
+    top: -60px;
+    left: 318px;
+}
+
+#button2:hover{
+    width:200px;
+    height:200px;
+    top: -45px;
+    left: 325px;
+}
+
+#button3{
+    top: -60px;
+    left: 464px;
+}
+
+#button3:hover{
+    width:200px;
+    height:200px;
+    top: -45px;
+    left: 475px;
+}
+
+#button4{
+    top: 45px;
+    left: 715px;
+}
+
+#button4:hover{
+    width:200px ;
+    height:200px ;
+    top: 50px;
+    left: 725px;
+}

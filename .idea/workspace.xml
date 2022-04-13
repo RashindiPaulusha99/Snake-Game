@@ -27,8 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add food qty">
-      <change afterPath="$PROJECT_DIR$/assets/styles/homepageStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/coloursPageStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/homepageStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/homePageStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -112,7 +113,7 @@
       <workItem from="1649660092231" duration="10000" />
       <workItem from="1649660137859" duration="21280000" />
       <workItem from="1649735832158" duration="41591000" />
-      <workItem from="1649820324330" duration="4511000" />
+      <workItem from="1649820324330" duration="4781000" />
     </task>
     <task id="LOCAL-00001" summary="add image">
       <created>1649770077146</created>
