@@ -716,8 +716,8 @@
     right: 0;
     filter: drop-shadow(-5px 18px 13px black);
 }
-
-/*--------------welcome page styles----------------*/
+/*
+!*--------------welcome page styles----------------*!
 
 #homePage{
     width: 100%;
@@ -784,7 +784,7 @@
     left: 0;
     right: 0;
     margin: auto;
-}
+}*/
 
 /*------------colour page styles------------*/
 
