@@ -240,22 +240,26 @@ function again(){
 
 $("#btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
-    again();
+    $('.win_container').css('transform','scale(0)');
     clearInterval(generate_time);
     generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
+    again();
+    $('.play_model_container').css('transform','scale(1)');
 });
 
 $("#btnOkInWin").on('click',function () {
     $('.win_container').css('transform','scale(0)');
-    again();
+    $('.model_container').css('transform','scale(0)');
     clearInterval(generate_time);
     generate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
     play.play();
+    again();
+    $('.play_model_container').css('transform','scale(1)');
 });
 
 $("#close").on('click',function () {
