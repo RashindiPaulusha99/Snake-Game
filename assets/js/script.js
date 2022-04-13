@@ -259,6 +259,7 @@ $("#btnOkInWin").on('click',function () {
     $(".spend_time").text(0);
     play.play();
     again();
+    
     $('.play_model_container').css('transform','scale(1)');
 });
 
