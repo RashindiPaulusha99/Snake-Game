@@ -27,6 +27,7 @@ setTime();
 function setTime() {
     $("#display_time").text(time++);
 }
+
 /*visible snake*/
 function createSnake() {
 
@@ -57,6 +58,7 @@ function move() {
     snakeMove();
 }
 
+var stop_eat_sound;
 function createFood() {
     ctx.fillStyle = 'yellow';
     ctx.fillRect(food.offsetX, food.offsetY,snakeWidth, snakeHeight);
@@ -64,7 +66,7 @@ function createFood() {
     /*increase score and eat food and snake makes bigger*/
     if (snake[0].offsetX == food.offsetX && snake[0].offsetY == food.offsetY){
 
-        setTimeout(playSound,100);
+        stop_eat_sound = setTimeout(playSound,100);
 
         score+=2;
         foods++;
@@ -133,6 +135,7 @@ function gameOver() {
                 clearInterval(genetate_time);
                 clearInterval(gameover);
                 gameover = setInterval(game_over_audio,100);
+                clearTimeout(stop_eat_sound);
             }
         }
     }
@@ -142,14 +145,21 @@ function gameWin() {
     if (score >= 5){
         $('.win_container').css('transform','scale(1)');
         $('.model_container').css('transform','scale(0)');
-        $('.play_model_container').css('transform','scale(0)');
         $(".victory_score").text(score);
         $(".spend_time").text($("#display_time").text());
         clearInterval(genetate_time);
-        clearInterval(stop);
-        clearInterval(stop_move);
         clearInterval(gamewin);
         gamewin = setInterval(game_win_audio,100);
+        clearTimeout(stop_eat_sound);
+
+        for (var i in snake) {
+            if (i != 0){
+                if (snake[0].offsetX == snake[i].offsetX && snake[0].offsetY == snake[i].offsetY || snake[0].offsetY === canvas.height || snake[0].offsetX == canvas.width || snake[0].offsetY < 0 || snake[0].offsetX < 0 ) {
+                    $('.model_container').css('transform','scale(0)');
+                    clearInterval(gameover);
+                }
+            }
+        }
     }
 }
 
@@ -254,8 +264,8 @@ $(".btnOk").on('click',function () {
 $("#btnOkInWin").on('click',function () {
     $('.win_container').css('transform','scale(0)');
     again();
-    clearInterval(genetate_time);
     clearInterval(gamewin);
+    clearInterval(genetate_time);
     genetate_time = setInterval(setTime,1000);
     $(".victory_score").text(0);
     $(".spend_time").text(0);
