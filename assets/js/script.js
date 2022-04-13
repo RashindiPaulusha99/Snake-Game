@@ -20,6 +20,9 @@ var foods = 0;
 
 var keyPress = "ArrowDown";
 
+var snakeSpeed;
+var snakeColour;
+
 createSnake();
 createFood();
 setTime();
@@ -30,7 +33,6 @@ function setTime() {
 
 /*visible snake*/
 function createSnake() {
-    console.log(snakeColour);
     for (var i = 0; i < snake.length; i++) {
         ctx.fillStyle = snakeColour;
         ctx.fillRect(snake[i].offsetX, snake[i].offsetY, snakeWidth, snakeHeight);
@@ -43,9 +45,6 @@ $('.play_model_container').css('transform','scale(1)');
 $('.model_container').css('transform','scale(0)');
 $('.win_container').css('transform','scale(0)');
 
-$("#display_speed").text(snakeSpeed);
-console.log(snakeSpeed);
-
 $('#play_btn').hide();
 $('#stop_btn').hide();
 $('#pause_btn').hide();
@@ -54,6 +53,7 @@ $('#volume_btn').hide();
 
 function move() {
     $("#super").css('display','none');
+    $("#display_speed").text(snakeSpeed+'ms');
     clearCanvas();
     createFood();
     gameOver();
@@ -253,7 +253,7 @@ function again(){
     }
 }
 
-$(".btnOk").on('click',function () {
+$("#btnOk").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     again();
     clearInterval(genetate_time);
@@ -280,7 +280,7 @@ function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-$(".close").on('click',function () {
+$("#close").on('click',function () {
     $('.model_container').css('transform','scale(0)');
     clearInterval(gameover);
     $(".victory_score").text(0);
@@ -388,14 +388,12 @@ $("#startBoard").on('click',function () {
     $("#colours").css('display','block');
 });
 
-var snakeColour;
 $("#button1").on('click',function () {
     $("#homePage").css('display','none');
     $("#playSection").css('display','none');
     $("#speed").css('display','block');
     $("#colours").css('display','none');
     snakeColour = 'red';
-    console.log(snakeColour);
 });
 
 $("#button2").on('click',function () {
@@ -404,7 +402,6 @@ $("#button2").on('click',function () {
     $("#speed").css('display','block');
     $("#colours").css('display','none');
     snakeColour = 'yellow';
-    console.log(snakeColour);
 });
 
 $("#button3").on('click',function () {
@@ -413,7 +410,6 @@ $("#button3").on('click',function () {
     $("#speed").css('display','block');
     $("#colours").css('display','none');
     snakeColour = 'blue';
-    console.log(snakeColour);
 });
 
 $("#button4").on('click',function () {
@@ -422,17 +418,14 @@ $("#button4").on('click',function () {
     $("#speed").css('display','block');
     $("#colours").css('display','none');
     snakeColour = 'green';
-    console.log(snakeColour);
 });
 
-var snakeSpeed;
 $("#speed_btn1_image").on('click',function () {
     $("#homePage").css('display','none');
     $("#playSection").css('display','block');
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     snakeSpeed = 300;
-    console.log(snakeSpeed);
 });
 
 $("#speed_btn2_image").on('click',function () {
@@ -441,7 +434,6 @@ $("#speed_btn2_image").on('click',function () {
     $("#speed").css('display','none');
     $("#colours").css('display','none');
     snakeSpeed = 500;
-    console.log(snakeSpeed);
 });
 
 $("#speed_btn3_image").on('click',function () {
@@ -449,8 +441,7 @@ $("#speed_btn3_image").on('click',function () {
     $("#playSection").css('display','block');
     $("#speed").css('display','none');
     $("#colours").css('display','none');
-    snakeSpeed = 1000;
-    console.log(snakeSpeed);
+    snakeSpeed = 800;
 });
 
 

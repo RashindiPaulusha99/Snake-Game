@@ -270,7 +270,7 @@
 #display_speed{
     position: absolute;
     top: 280px;
-    left: 127px;
+    left: 94px;
     color: white;
     font-size: 30px;
 }
@@ -376,7 +376,7 @@
     font-family: 'Bungee Shade', cursive;
 }
 
-.btnOk{
+#btnOk{
     position: absolute;
     top: 160px;
     left: -251px;
@@ -390,12 +390,12 @@
     cursor: pointer;
 }
 
-.btnOk:hover{
+#btnOk:hover{
     width: 137px;
     height: 122px;
 }
 
-.close{
+#close{
     position: absolute;
     top: 169px;
     left: -69px;
@@ -409,7 +409,7 @@
     cursor: pointer;
 }
 
-.close:hover{
+#close:hover{
     width:152px;
     height: 162px;
 }
