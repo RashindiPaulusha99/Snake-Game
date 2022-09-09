@@ -27,7 +27,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add food qty">
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/EverlastingBlushingEarthworm-m-unscreen.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bg Snake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bg1 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/button1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/button2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/button_panel1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/button_panel2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/button_panel4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/buttons (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/buttons (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/buttons (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/buttons (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cartoon-snake-4853172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/congratulations2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cute-green-snake-cartoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/frame2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gamebg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/greenBg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/header2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/header3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/homebtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hourglass-unscreen.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/pausebtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_btn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/snake cartoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/snake.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/snake_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/snek-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/speed (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/speed (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/speed (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/startbtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/stopbtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/victory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/volumebtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand(2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/wp4078491.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/yellow snake (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/yellow snake (2).png" beforeDir="false" />
     </list>
     <list id="33b4a564-6d49-4f3f-b23a-1fc89593cff6" name="add image" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +157,15 @@
       <workItem from="1649660092231" duration="10000" />
       <workItem from="1649660137859" duration="21280000" />
       <workItem from="1649735832158" duration="41591000" />
-      <workItem from="1649820324330" duration="26006000" />
+      <workItem from="1649820324330" duration="26316000" />
+      <workItem from="1650204403471" duration="3000" />
+      <workItem from="1650204440583" duration="147000" />
+      <workItem from="1651243985220" duration="590000" />
+      <workItem from="1652360793726" duration="533000" />
+      <workItem from="1658476167685" duration="1209000" />
+      <workItem from="1658666131362" duration="229000" />
+      <workItem from="1658666422406" duration="4341000" />
+      <workItem from="1662737354732" duration="1394000" />
     </task>
     <task id="LOCAL-00001" summary="add image">
       <created>1649770077146</created>
@@ -167,25 +224,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="add image" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="447" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1649589876198">
+    <state x="517" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1662739219941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1649589876198" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649787165504">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649787165504" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1649147531020">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1649147531020" />
-    <state x="618" y="326" key="VCS.ChangelistChooser" timestamp="1649770252376">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="618" y="326" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1649770252376" />
-    <state x="747" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1649831035643">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="747" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1649831035643" />
+    <state x="517" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1662739219941" />
   </component>
 </project>
