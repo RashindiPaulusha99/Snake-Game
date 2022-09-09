@@ -26,58 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add food qty">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/EverlastingBlushingEarthworm-m-unscreen.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg Snake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg1 (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/button1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/button2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/button_panel1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/button_panel2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/button_panel4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/buttons (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/buttons (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/buttons (3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/buttons (4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cartoon-snake-4853172.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/congratulations2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cute-green-snake-cartoon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/frame2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/gamebg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/greenBg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/header2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/header3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/homebtn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/hourglass-unscreen.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/pausebtn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/play_btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/play_btn1 (5).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/snake cartoon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/snake.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/snake_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/snek-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/speed (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/speed (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/speed (3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/startbtn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/stopbtn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/victory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/volumebtn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/win.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand (4).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/wood_stand(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/wp4078491.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/yellow snake (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/yellow snake (2).png" beforeDir="false" />
-    </list>
+    <list default="true" id="f158b298-1c07-468f-a025-23ad0424fd97" name="Default Changelist" comment="add food qty" />
     <list id="33b4a564-6d49-4f3f-b23a-1fc89593cff6" name="add image" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,19 +58,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/audio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\GDSE58\Web\TestGame\assets\images" />
+      <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
       <recent name="F:\GDSE58\Web\TestGame\assets\icons" />
       <recent name="F:\GDSE58\Web\TestGame\assets\audeo" />
       <recent name="F:\GDSE58\Web\TestGame\SnakeGame\assets\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\GDSE58\Web\TestGame\assets\audio" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -165,7 +114,7 @@
       <workItem from="1658476167685" duration="1209000" />
       <workItem from="1658666131362" duration="229000" />
       <workItem from="1658666422406" duration="4341000" />
-      <workItem from="1662737354732" duration="1394000" />
+      <workItem from="1662737354732" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="add image">
       <created>1649770077146</created>
